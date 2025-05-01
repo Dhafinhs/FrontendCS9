@@ -41,7 +41,7 @@ const UpdateItem = () => {
     if (form.image) formData.append("image", form.image);
 
     try {
-      const res = await axios.put("https://backend-4vhu.vercel.app/item", formData, {
+      const res = await axios.put("backend-4vhu.vercel.app/item", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

@@ -20,7 +20,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:3000/user/login?email=${form.email}&password=${form.password}`
+        `https://backend-4vhu.vercel.app//user/login?email=${form.email}&password=${form.password}`
       );
 
       if (res.data.success) {

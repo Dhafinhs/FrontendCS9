@@ -19,8 +19,8 @@ const Home = () => {
 
   const fetchItems = (storeId = null) => {
     const url = storeId
-      ? `http://localhost:3000/item/byStoreId/${storeId}`
-      : "http://localhost:3000/item";
+      ? `https://backend-4vhu.vercel.app/item/byStoreId/${storeId}`
+      : "hhttps://backend-4vhu.vercel.app/item";
 
     axios
       .get(url)
@@ -32,7 +32,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/store/getAll")
+      .get("https://backend-4vhu.vercel.app/store/getAll")
       .then((res) => setStores(res.data.payload || []))
       .catch((err) => console.error(err));
 

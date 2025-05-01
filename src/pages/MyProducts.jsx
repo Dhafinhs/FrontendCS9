@@ -11,7 +11,7 @@ const MyProducts = () => {
     if (!storeId) return alert("Masukkan Store ID terlebih dahulu.");
 
     try {
-      const res = await axios.get(`http://localhost:3000/item/byStoreId/${storeId}`);
+      const res = await axios.get(`https://backend-production-5264.up.railway.app/item/byStoreId/${storeId}`);
       setProducts(res.data.payload || []);
     } catch (err) {
       console.error(err);
@@ -22,7 +22,7 @@ const MyProducts = () => {
   const handleDelete = async (id) => {
     if (!confirm("Yakin ingin hapus produk ini?")) return;
     try {
-      await axios.delete(`http://localhost:3000/item/${id}`);
+      await axios.delete(`https://backend-production-5264.up.railway.app/item/${id}`);
       setProducts(products.filter((item) => item.id !== id));
     } catch (err) {
       console.error(err);

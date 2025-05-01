@@ -20,7 +20,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        `https://backend-4vhu.vercel.app//user/login?email=${form.email}&password=${form.password}`
+        `https://backend-production-5264.up.railway.app/user/login?email=${form.email}&password=${form.password}`
       );
 
       if (res.data.success) {

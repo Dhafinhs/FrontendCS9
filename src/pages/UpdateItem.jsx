@@ -13,7 +13,7 @@ const UpdateItem = () => {
   });
 
   useEffect(() => {
-    axios.get(`https://backend-4vhu.vercel.app/item/byId/${id}`)
+    axios.get(`https://backend-production-5264.up.railway.app/item/byId/${id}`)
       .then((res) => {
         const item = res.data.payload;
         setForm({
@@ -41,7 +41,7 @@ const UpdateItem = () => {
     if (form.image) formData.append("image", form.image);
 
     try {
-      const res = await axios.put("backend-4vhu.vercel.app/item", formData, {
+      const res = await axios.put("https://backend-production-5264.up.railway.app/item", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

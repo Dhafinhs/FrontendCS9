@@ -32,7 +32,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("https://backend-4vhu.vercel.app/store/getAll")
+      .get("https://backend-production-5264.up.railway.app//store/getAll")
       .then((res) => setStores(res.data.payload || []))
       .catch((err) => console.error(err));
 

@@ -18,7 +18,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3000/user/register", form, {
+      const res = await axios.post("https://backend-4vhu.vercel.app/user/register", form, {
         headers: { "Content-Type": "application/json" },
       });
 

@@ -7,7 +7,7 @@ const Transaction = () => {
 
   const fetchTransactions = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/transaction");
+      const res = await axios.get("https://backend-4vhu.vercel.app/transaction");
       if (res.data.success) {
         const userTransactions = res.data.payload.filter(t => t.user_id === user.id);
         setTransactions(userTransactions);
@@ -19,7 +19,7 @@ const Transaction = () => {
 
   const handlePay = async (id) => {
     try {
-      const res = await axios.post(`http://localhost:3000/transaction/pay/${id}`);
+      const res = await axios.post(`https://backend-4vhu.vercel.app/transaction/pay/${id}`);
       if (res.data.success) {
         alert("Pembayaran berhasil!");
         fetchTransactions();
@@ -34,7 +34,7 @@ const Transaction = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:3000/transaction/${id}`);
+      const res = await axios.delete(`https://backend-4vhu.vercel.app/transaction/${id}`);
       if (res.data.success) {
         alert("Transaksi dihapus.");
         fetchTransactions();

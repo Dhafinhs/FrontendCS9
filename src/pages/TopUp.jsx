@@ -20,7 +20,7 @@ const TopUp = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/user/topUp",
+        "https://backend-4vhu.vercel.app/user/topUp",
         {
           id: user.id,
           amount: Number(amount),
